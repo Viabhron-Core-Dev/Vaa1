@@ -1,0 +1,6 @@
+{
+  "name": "Vaa",
+  "description": "One place for your AI chats, Google AI Studio, and GitHub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
