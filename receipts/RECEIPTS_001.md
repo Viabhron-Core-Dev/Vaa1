@@ -5,3 +5,11 @@
 - How it was verified: local build only (compile_applet passed).
 - Any deviation from what was requested, and why: The blueprint specified a Dark/Celestial theme, but the user explicitly requested a "sky blue and white light theme", so the light sky blue theme was implemented instead to respect the user's override.
 - Any known issue or follow-up needed: The tab strip and FABs are currently static placeholders and need logic wired in future phases as specified by the blueprint.
+
+- Timestamp: 2026-07-26T12:52:00-07:00
+- One-line summary of what was requested: Fix APK pipeline failure due to missing gradlew.
+- Exact files touched: /.github/workflows/build.yml
+- What was actually done: Added a step to run `gradle wrapper` before executing `./gradlew` in the GitHub Actions build workflow to ensure the wrapper is generated on the CI runner, as it's not checked into the repository by default in this environment.
+- How it was verified: Code review (structural fix for missing file in CI).
+- Any deviation from what was requested, and why: None.
+- Any known issue or follow-up needed: None.
