@@ -13,3 +13,11 @@
 - How it was verified: Code review (structural fix for missing file in CI).
 - Any deviation from what was requested, and why: None.
 - Any known issue or follow-up needed: None.
+
+- Timestamp: 2026-07-29T12:59:00-07:00
+- One-line summary of what was requested: Fix APK pipeline failure due to missing debug.keystore.
+- Exact files touched: /.github/workflows/build.yml
+- What was actually done: Added a step to run `keytool` to generate a `debug.keystore` file in the GitHub Actions build workflow, because the CI environment does not automatically generate this file, which caused the `:app:validateSigningDebug` task to fail.
+- How it was verified: Code review (structural fix for missing keystore in CI environment).
+- Any deviation from what was requested, and why: None.
+- Any known issue or follow-up needed: None.
